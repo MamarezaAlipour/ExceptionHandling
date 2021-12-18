@@ -34,7 +34,10 @@ public class OExceptionFilterAttribute : ExceptionFilterAttribute
         }
 
         operationResult.ErrorMessage = message;
-        context.Result = new ObjectResult(JsonConvert.SerializeObject(operationResult, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() })) { StatusCode = (int)code };
+        context.Result = new ObjectResult(JsonConvert.SerializeObject(operationResult, new JsonSerializerSettings
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver() })) { StatusCode = (int)code 
+        };
     }
 
     public override async Task OnExceptionAsync(ExceptionContext context)
