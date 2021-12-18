@@ -1,5 +1,4 @@
 ﻿using ExceptionHandling.Test.Models;
-using ExceptionHandling;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExceptionHandling.Test.Controllers
